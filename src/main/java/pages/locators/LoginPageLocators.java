@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 public class LoginPageLocators {
 
     @FindBy(name = "username")
-    public WebElement velocityNumber;
+    public WebElement username;
 
     @FindBy(name = "password")
     public WebElement password;

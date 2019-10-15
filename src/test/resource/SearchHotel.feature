@@ -1,4 +1,6 @@
-@login-test @smoke-test @regression
+@search-hotel @smoke-test @regression
+
+  @requireLogin
   Feature: Verify search hotel functionality
     Scenario: Validate search module
       Given user is at the home page "PHPTRAVELS | Travel Technology Partner"

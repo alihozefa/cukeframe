@@ -29,6 +29,6 @@ public class BeforeActions {
         loginPageActions.enterUsername(properties.getProperty("username"));
         loginPageActions.enterPassword(properties.getProperty("password"));
         loginPageActions.clickLogInBtn();
-        loginPageActions.verifyTitle("Velocity Frequent Flyer Home");
+        loginPageActions.verifyTitle("My Account");
     }
 }

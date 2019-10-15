@@ -16,7 +16,7 @@ public class LoginPageActions extends SeleniumHelper {
     }
 
     public void enterUsername(String username){
-        loginPageLocators.velocityNumber.sendKeys(username);
+        loginPageLocators.username.sendKeys(username);
     }
 
     public void enterPassword(String password){
@@ -28,7 +28,8 @@ public class LoginPageActions extends SeleniumHelper {
     }
 
     public void verifyTitle(String title){
-        Assert.assertTrue(SeleniumDriver.getDriver().getTitle().equalsIgnoreCase(title),"User is not logged in successfully!");
+        waitFor(1000);
+        Assert.assertEquals(title.toUpperCase(), SeleniumDriver.getDriver().getTitle().toUpperCase(),"User is not logged in successfully!");
     }
 
 }

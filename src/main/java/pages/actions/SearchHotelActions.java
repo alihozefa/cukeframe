@@ -18,9 +18,10 @@ public class SearchHotelActions extends SeleniumHelper {
 
     public void searchHotel(String keywords){
         clickElement(seachHotelLocators.searchbox);
-        waitFor(3000);
         seachHotelLocators.searchboxInput.sendKeys(keywords);
         waitForElement(seachHotelLocators.searchResults);
+        waitFor(1000);
+        seachHotelLocators.searchbox.sendKeys(Keys.ARROW_DOWN);
         seachHotelLocators.searchbox.sendKeys(Keys.TAB);
     }
 

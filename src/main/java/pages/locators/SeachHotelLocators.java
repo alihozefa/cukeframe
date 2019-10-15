@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class SeachHotelLocators {
 
-    @FindBy(xpath = "//div[contains(@class,'locationlistthhotels')]//a")
+    @FindBy(xpath = "//div[@id='s2id_location']//a")
     public WebElement searchbox;
 
-    @FindBy(xpath = "//input[@id='s2id_autogen5']")
+    @FindBy(xpath = "//div[@id='select2-drop']//input")
     public WebElement searchboxInput;
 
     @FindBy(xpath = "//ul[@class='select2-results']//li")

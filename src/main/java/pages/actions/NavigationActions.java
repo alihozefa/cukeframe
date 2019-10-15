@@ -14,29 +14,31 @@ public class NavigationActions extends SeleniumHelper {
         this.navigationLocators = PageFactory.initElements(SeleniumDriver.getDriver(),NavigationLocators.class);
     }
 
-    public void mouseHoverAndNavigateTo(String mouseHoverLink){
-        //mouseHover(navigationLocators.myActivityLink);
-        //clickElement(navigationLocators.transactionActivityLink);
+    public void navigateTo(String link){
 
-        switch (mouseHoverLink){
+        switch (link){
             case "Hotels" :
-                mouseHover(navigationLocators.hotelsLink);
+                clickElement(navigationLocators.hotelsLink);
                 break;
             case "Flights" :
-                mouseHover(navigationLocators.flightsLink);
+                clickElement(navigationLocators.flightsLink);
                 break;
             case "Tours" :
-                mouseHover(navigationLocators.toursLink);
+                clickElement(navigationLocators.toursLink);
                 break;
             case "Cars" :
-                mouseHover(navigationLocators.carsLink);
+                clickElement(navigationLocators.carsLink);
                 break;
             case "Blog" :
-                mouseHover(navigationLocators.blogLink);
+                clickElement(navigationLocators.blogLink);
                 break;
             case "Offers" :
-                mouseHover(navigationLocators.offersLink);
+                clickElement(navigationLocators.offersLink);
                 break;
         }
+    }
+
+    public void navigateHome(){
+        clickElement(navigationLocators.logo);
     }
 }

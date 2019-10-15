@@ -1,6 +1,5 @@
 package stepdefs;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -16,12 +15,13 @@ public class SearchHotelSteps {
 
     @Given("^user is at the home page \"([^\"]*)\"$")
     public void userIsAtTheHomePage(String title) {
+        navigationActions.navigateHome();
         Assert.assertEquals(SeleniumDriver.getDriver().getTitle(), title, "User is not at the hope page!!");
     }
 
     @When("^user select the \"([^\"]*)\" tab$")
     public void userSelectTheTab(String arg0) {
-        navigationActions.mouseHoverAndNavigateTo(arg0);
+        navigationActions.navigateTo(arg0);
     }
 
     @And("^search hotel or city name \"([^\"]*)\"$")
