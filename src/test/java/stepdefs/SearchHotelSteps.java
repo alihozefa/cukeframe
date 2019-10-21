@@ -2,6 +2,7 @@ package stepdefs;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pages.actions.NavigationActions;
@@ -42,5 +43,15 @@ public class SearchHotelSteps {
     @And("^click search button$")
     public void clickSearchButton() {
         searchHotelActions.clickSearchBtn();
+    }
+
+    @Then("^view hotel details$")
+    public void viewHotelDetails() {
+        searchHotelActions.viewHotelDetails();
+    }
+
+    @And("^verify hotel overview$")
+    public void verifyHotelOverview() {
+        searchHotelActions.verifyHotelOverview();
     }
 }

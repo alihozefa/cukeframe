@@ -23,4 +23,10 @@ public class SeachHotelLocators {
     @FindBy(xpath = "//button[@class='btn btn-lg btn-block btn-primary pfb0 loader']")
     public WebElement button;
 
+    @FindBy(css = "table#listing tr button")
+    public WebElement hotelListDetails;
+
+    @FindBy(className = "overview__header")
+    public WebElement hotelOverview;
+
 }

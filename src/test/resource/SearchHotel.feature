@@ -9,3 +9,5 @@
       And enter check-in date "10/09/2019"
       And enter check-out date "11/09/2019"
       And click search button
+      Then view hotel details
+      And verify hotel overview

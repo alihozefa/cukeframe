@@ -38,4 +38,14 @@ public class SearchHotelActions extends SeleniumHelper {
         clickElement(seachHotelLocators.button);
     }
 
+    public void viewHotelDetails(){
+        waitForElement(seachHotelLocators.hotelListDetails);
+        clickElement(seachHotelLocators.hotelListDetails);
+    }
+
+    public void verifyHotelOverview(){
+        waitForElement(seachHotelLocators.hotelOverview);
+        Assert.assertTrue(seachHotelLocators.hotelOverview.isDisplayed(),"Hotel overview has not been displayed!!");
+    }
+
 }
